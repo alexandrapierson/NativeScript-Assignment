@@ -1,0 +1,64 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="My App" icon="" />
+    <StackLayout class="p-4">
+        <SearchBar
+            id="searchBar"
+            hint="Enter search term here ..."
+            text="{{sbText}}"
+            clear="onClear"
+            submit="onSubmit"
+            textFieldBackgroundColor="white"
+        />
+
+        <Label text="Please tap me" class="text-3xl text-center" />
+        <Button text="TAP" tap="{{ onTap }}" class="-primary" />
+        <Label text="{{ message }}" class="text-lg text-center text-gray-400" textWrap="true" />
+
+        <TextField hint="Enter text" color="orangered" backgroundColor="white" />
+
+        <Slider value="10" minValue="0" maxValue="10" loaded="onSliderLoaded" />
+
+        <TabView
+            loaded="onLoaded"
+            selectedIndexChanged="onSelectedIndexChanged"
+            androidTabsPosition="bottom"
+            androidOffscreenTabLimit="0"
+        >
+            <TabViewItem title="1st">
+                <StackLayout>
+                    <Label
+                        class="h2 m-t-16 text-center"
+                        textWrap="true"
+                    />
+                    <Label text="First Tab"/>
+                </StackLayout>
+            </TabViewItem>
+            <TabViewItem title="2nd">
+                <StackLayout>
+                    <Label
+                        class="h2 m-t-16 text-center"
+                        textWrap="true"
+                    />
+                    <Label text="Second Tab"/>
+                </StackLayout>
+            </TabViewItem>
+            <TabViewItem title="3rd">
+                <StackLayout>
+                    <Label
+                        class="h2 m-t-16 text-center"
+                        textWrap="true"
+                    />
+                    <Label text="Third Tab"/>
+                </StackLayout>
+            </TabViewItem>
+        </TabView>
+
+        <SegmentedBar>
+            <SegmentedBarItem title="First" />
+            <SegmentedBarItem title="Second" />
+            <SegmentedBarItem title="Third" />
+            <SegmentedBarItem title="Fourth" />
+        </SegmentedBar>
+
+    </StackLayout>
+</Page>
