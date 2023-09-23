@@ -10,14 +10,6 @@
             textFieldBackgroundColor="white"
         />
 
-        <Label text="Please tap me" class="text-3xl text-center" />
-        <Button text="TAP" tap="{{ onTap }}" class="-primary" />
-        <Label text="{{ message }}" class="text-lg text-center text-gray-400" textWrap="true" />
-
-        <TextField hint="Enter text" color="orangered" backgroundColor="white" />
-
-        <Slider value="10" minValue="0" maxValue="10" loaded="onSliderLoaded" />
-
         <TabView
             loaded="onLoaded"
             selectedIndexChanged="onSelectedIndexChanged"
@@ -31,6 +23,9 @@
                         textWrap="true"
                     />
                     <Label text="First Tab"/>
+                    <Label text="Please tap me" class="text-3xl text-center" />
+                    <Button text="TAP" tap="{{ onTap }}" class="-primary" />
+                    <Label text="{{ message }}" class="text-lg text-center text-gray-400" textWrap="true" />
                 </StackLayout>
             </TabViewItem>
             <TabViewItem title="2nd">
@@ -40,6 +35,7 @@
                         textWrap="true"
                     />
                     <Label text="Second Tab"/>
+                    <TextField hint="Enter text" color="orangered" backgroundColor="white" />
                 </StackLayout>
             </TabViewItem>
             <TabViewItem title="3rd">
@@ -49,16 +45,9 @@
                         textWrap="true"
                     />
                     <Label text="Third Tab"/>
+                    <Slider value="10" minValue="0" maxValue="10" loaded="onSliderLoaded" />
                 </StackLayout>
             </TabViewItem>
         </TabView>
-
-        <SegmentedBar>
-            <SegmentedBarItem title="First" />
-            <SegmentedBarItem title="Second" />
-            <SegmentedBarItem title="Third" />
-            <SegmentedBarItem title="Fourth" />
-        </SegmentedBar>
-
     </StackLayout>
 </Page>
